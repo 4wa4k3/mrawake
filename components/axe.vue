@@ -1,0 +1,63 @@
+<template>
+  <div class="tool">
+    <svg
+      id="axe"
+      class="tool"
+      xmlns="http://www.w3.org/2000/svg"
+      width="131.3"
+      height="451.23"
+      viewBox="0 0 131.3 451.23"
+      @click="select"
+    >
+      <g>
+        <path
+          d="M22.71,114.56c-.05,42.32-7.55,108.23-7.55,108.23S6.83,290.72,6.83,333.05,15.05,441.3,15.05,441.3c.33,4.39,5.09,8,11.36,8l27.14,0c6.28,0,11.7-3.57,11.37-8,0,0-8.2-65.91-8.21-108.24S65,222.82,65,222.82s7.51-65.92,7.56-108.24c0-12.12-.59-26.36-1.46-40.49l-49.88,0C22.12,88.2,22.73,102.43,22.71,114.56Z"
+          style="fill:#f25f29"
+        />
+        <path
+          d="M65.15,4.32C65,2.32,62.83.7,60,.7L20.44.68c-2.85,0-5.3,1.62-5.17,3.61,0,0,.15,1.29.39,3.62l49.88,0Z"
+          style="fill:#f25f29"
+        />
+        <path
+          d="M76.52,7.94h-11l-49.88,0H8.3A8.26,8.26,0,0,0,0,16.17L0,41v24.8a8.28,8.28,0,0,0,8.26,8.28h13l49.88,0h5.35l29.58,6.33L105.4,1.8Z"
+          style="fill:#a0d9d9"
+        />
+        <path
+          d="M128.88,1.2A7.42,7.42,0,0,0,123-1.95L105.4,1.8h0l.66,78.62h0L123,84a7.44,7.44,0,0,0,5.85-3.15,12.53,12.53,0,0,0,2.42-7.59l0-32.25,0-32.25A12.54,12.54,0,0,0,128.88,1.2Z"
+          style="fill:#fff"
+        />
+      </g>
+    </svg>
+    <overlay
+      :tool="tool"
+      class="tool-axe"
+      :slected="selected"
+      :class="{ 'tool-click': selected }"
+      @toggle="selected = !selected"
+    />
+  </div>
+</template>
+<script>
+import overlay from '~/components/overlay'
+export default {
+  components: {
+    overlay
+  },
+  data() {
+    return {
+      tool: {
+        name: 'axe',
+        description:
+          '&#x1F354; Lorem ipsum dolor sit amet consectetur adipisicing elit.Cupiditate ab doloribus porro, accusantium sed ipsam sapiente,exercitationem eveniet itaque, nihil odit. Earum adipisci explicabo laborum, impedit nemo tempora magni placeat! Delectus accusamus et soluta, iure omnis voluptatum, facilis doloremque cum amet, odio ipsa rem voluptate? Accusamus illo quaerat eligendi in! Distinctio aliquid enim minus, incidunt voluptatem tempore! Numquam, dicta odio. Repellat, ipsum? Veniam sequi ratione qui recusandae! Dolorem sequi doloribus sapiente vitae natus eius nulla illo ullam repudiandae, laboriosam et sint ab facere reprehenderit exercitationem ipsa consequuntur fugit in. Nostrum. Ratione nulla architecto quos voluptatum maxime aliquid, tenetur mollitia cumque eveniet magni culpa corrupti fuga dignissimos cum quas, molestias eligendi consectetur natus laborum dolorem aspernatur ducimus autem. Consequatur, officiis est. Aut, quod eos est molestias facere alias. Laboriosam quo ex nihil pariatur cum, aliquam harum beatae exercitationem aliquid eum? Molestiae rerum nam quos ab quam aperiam saepe, ullam corporis quo.',
+        svg: 'axe'
+      },
+      selected: false
+    }
+  },
+  methods: {
+    select() {
+      this.selected = true
+    }
+  }
+}
+</script>
